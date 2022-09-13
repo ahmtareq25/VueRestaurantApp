@@ -2,10 +2,10 @@
     <AppLogo />
     <div id="feedback-form">
         <h2 class="header">Register Today</h2>
-        <input type="text" placeholder="Name" />
-        <input type="email" placeholder="Email" />
-        <input type="password" placeholder="Password" />
-        <AppSubmitButton buttonName="Sign Up" />
+        <input v-model="name" type="text" placeholder="Name" />
+        <input v-model="email"  type="email" placeholder="Email" />
+        <input v-model="password"  type="password" placeholder="Password" />
+        <AppSubmitButton v-on:click="signUp" buttonName="Sign Up" />
     </div>
 </template>
 
@@ -15,11 +15,50 @@
 import AppLogo from './partials/AppLogo.vue';
 import AppSubmitButton from './partials/AppSubmitButton.vue';
 
+import axios from 'axios'
+
 export default {
     name: 'SignUp',
     components: {
         AppLogo,
         AppSubmitButton
+    },
+    data(){
+        return {
+            name : "",
+            email : "",
+            password : ""
+        }
+    },
+    methods:{
+        async signUp(){
+        
+
+            let result = await axios.post("http://localhost:3000/users",{
+                name : this.name,
+                email : this.email,
+                password : this.password
+            });
+            console.log(result)
+
+            if(result.status == 201){
+                localStorage.setItem('user_info', JSON.stringify(result.data))
+                this.redirectToHome()
+            }
+
+        },
+
+        redirectToHome(){
+            this.$router.push({
+                    name:'Home'
+                })
+        }
+    },
+    mounted(){
+        let user = localStorage.getItem('user_info');
+        if(user){
+            this.redirectToHome()
+        }
     }
 }
 </script>
