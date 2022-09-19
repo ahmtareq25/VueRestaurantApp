@@ -3,7 +3,7 @@
     {
       "name": "tareq",
       "email": "tareq@email.com",
-      "password": "tareq@112233",
+      "password": "123",
       "id": 1
     },
     {
@@ -23,6 +23,12 @@
       "email": "sakil@email.com",
       "password": "112233",
       "id": 4
+    },
+    {
+      "name": "tareq",
+      "email": "shihab@gmail.com",
+      "password": "tareq",
+      "id": 5
     }
   ]
 }

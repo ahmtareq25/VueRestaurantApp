@@ -6,7 +6,12 @@
         <input v-model="email"  type="email" placeholder="Email" />
         <input v-model="password"  type="password" placeholder="Password" />
         <AppSubmitButton v-on:click="signUp" buttonName="Sign Up" />
+        <p>
+            <router-link to="/login" style="color:gray; margin-top: 5px;">Login</router-link>
+        </p>
+        
     </div>
+    
 </template>
 
 <script>

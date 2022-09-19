@@ -13,7 +13,7 @@ export default {
 <style>
 #submitBtn {
     display: block;
-    margin: 20px auto 0;
+    margin: 20px auto 5;
     width: 150px;
     height: 40px;
     border-radius: 25px;
@@ -21,6 +21,7 @@ export default {
     color: #eee;
     font-weight: 700;
     box-shadow: 1px 4px 10px 1px #aaa;
+    margin-bottom: 10px;
 
     background: #207cca;
     /* Old browsers */
