@@ -30,5 +30,25 @@
       "password": "tareq",
       "id": 5
     }
+  ],
+  "restaurants": [
+    {
+      "name": "Jungsan Food",
+      "contact": "01670339401",
+      "address": "Chittagong, Dhaka",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "name": "Fast Food",
+      "contact": "01749452019",
+      "address": "Dhaka"
+    },
+    {
+      "name": "Food vally",
+      "contact": "01545454",
+      "address": "Noakhali",
+      "id": 3
+    }
   ]
 }

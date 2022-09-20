@@ -9,8 +9,8 @@
 
       <ul>
         <li><router-link to="/">Home</router-link></li>
-        <li><router-link to="/">Add Restaurant</router-link></li>
-        <li><router-link to="/">Update Restaurant</router-link></li>
+        <li><router-link to="/add-restaurant">Add Restaurant</router-link></li>
+        <!-- <li><router-link to="/update-restaurant">Update Restaurant</router-link></li> -->
         <li><a @click="logout" href="#">Logout</a></li>
       </ul>
     </div>
